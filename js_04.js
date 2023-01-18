@@ -13,18 +13,15 @@ document.write(`${inputYear} is LeapYear ? ` + isLeap(inputYear) + "</br>");
 console.log(`${inputYear} is LeapYear ? : ` + isLeap(inputYear));
 
 // 2. write a funcition that would allow you to do this
-//     var addSix = createBase(6);
-//     addSix = createBase(10)-> 16
-//     addSix = createBase(21)-> 27
+function createBase(base){
+   return function(add){
+        return add+base;
+    }
+}
 
-// function createBase(base){
-//     function addSix(add+base){
-//       return add+six;
-//     }
-//     return addSix;
-// }
-
-// let addSix =createBase(6);
+let addSix=createBase(6);
+console.log(addSix(16));
+console.log(addSix(21));
 
 // 3. how would you check if a number is integer;
 let inputNumber = Number(
